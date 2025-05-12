@@ -15,7 +15,7 @@ class DocumentParsingTool:
 
     name: str = "Document Parsing Tool"
     description: str = "Extract text from PDF by converting to images and using OCR"
-    pdf_to_image_api_url: str = "https://sweeping-moth-probably.ngrok-free.app/parse_image/image"
+    pdf_to_image_api_url: str = "http://0.0.0.0:8000/parse_image/image" #https://sweeping-moth-probably.ngrok-free.app/parse_image/image
     
     def _validate_input(self, file_path: str) -> Dict:
         """Validate the input document file."""

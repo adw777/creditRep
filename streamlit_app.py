@@ -4,7 +4,7 @@ import os
 from typing import List
 
 # FastAPI endpoint URLs
-API_BASE_URL = "http://localhost:8000"
+API_BASE_URL = "http://localhost:8001"
 PARSE_URL = f"{API_BASE_URL}/parse"
 CHAT_URL = f"{API_BASE_URL}/chat"
 
