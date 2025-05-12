@@ -147,7 +147,7 @@ EMAIL_URL = f"{API_BASE_URL}/sendEmail"
 
 # Page configuration
 st.set_page_config(
-    page_title="Document Chat Assistant",
+    page_title="creditRepChat",
     page_icon="📄",
     layout="wide"
 )
@@ -188,7 +188,7 @@ def handle_dispute_process():
     with col1:
         user_email = st.text_input("Your email address:")
     with col2:
-        bank_email = st.text_input("Bank's email address for disputes:")
+        bank_email = st.text_input("Bank's email address:")
     
     if dispute_details and user_email and bank_email:
         # Generate email content using the chat endpoint
@@ -224,12 +224,12 @@ def handle_dispute_process():
             body = "\n".join(email_lines[1:]).strip()
             
             # Show email preview
-            st.markdown("### 📧 Preview Dispute Email")
+            st.markdown("### 📧 Preview Generated Email")
             st.info(f"**Subject:** {subject}")
             st.text_area("Email Body", body, height=300, disabled=True)
             
             # Send email button
-            if st.button("Send Dispute Email"):
+            if st.button("Send Email"):
                 # Send email using email endpoint
                 email_response = requests.post(
                     EMAIL_URL,
@@ -247,7 +247,7 @@ def handle_dispute_process():
                     # Add dispute confirmation to chat history
                     st.session_state.messages.append({
                         "role": "assistant",
-                        "content": "I've helped you send a dispute email. You should receive a confirmation from the bank. Keep your dispute details for your records."
+                        "content": "I've sent the email. You should receive a confirmation from the bank. Keep your details for your records."
                     })
                     st.session_state.dispute_mode = False
                     st.rerun()
@@ -294,7 +294,7 @@ def reset_conversation():
     st.session_state.dispute_details = None
 
 def main():
-    st.title("Document Chat Assistant")
+    st.title("creditRepChat")
     
     # Initialize session state
     initialize_session_state()
@@ -335,7 +335,7 @@ def main():
             handle_dispute_process()
         
         # Display chat messages
-        st.markdown("### 💬 Chat")
+        st.markdown("### 💬 Ask your queries")
         for message in st.session_state.messages:
             with st.chat_message(message["role"]):
                 st.markdown(message["content"])
