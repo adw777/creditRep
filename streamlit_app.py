@@ -10,7 +10,7 @@ CHAT_URL = f"{API_BASE_URL}/chat"
 
 # Page configuration
 st.set_page_config(
-    page_title="Document Chat Assistant",
+    page_title="creditRepChat",
     page_icon="📄",
     layout="wide"
 )
@@ -61,7 +61,7 @@ def reset_conversation():
     st.session_state.current_document = None
 
 def main():
-    st.title("Document Chat Assistant")
+    st.title("creditRepChat")
     
     # Initialize session state
     initialize_session_state()
@@ -100,7 +100,7 @@ def main():
                 st.rerun()
         
         # Chat interface
-        st.markdown("### Chat")
+        st.markdown("### Ask Questions About Your Document")
         
         # Display chat messages
         for message in st.session_state.messages:
