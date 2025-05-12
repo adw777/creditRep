@@ -1,0 +1,31 @@
+Question:
+Based on the data provided, calculate the total combined outstanding balance from all contract types (instalment and non-instalment), including both active and guaranteed contracts. How many of these contracts show any overdue amount?
+
+Answer:
+Based on the provided credit report content, here are the calculations for the total combined outstanding balance and the number of contracts showing any overdue amount:
+
+### Outstanding Balances:
+1. **Instalments:**
+   - Total Outstanding Balance: **90,000** (from the instalment section)
+
+2. **Non-Instalments:**
+   - Total Outstanding Balance for Credit Cards: **2,819** (from the non-instalment section)
+   - Total Outstanding Balance for Overdraft: **2,300** (from the overdraft section)
+
+### Total Combined Outstanding Balance:
+- Instalments: **90,000**
+- Non-Instalments (Credit Cards + Overdraft): **2,819 + 2,300 = 5,119**
+
+**Total Combined Outstanding Balance = 90,000 + 5,119 = 95,119**
+
+### Overdue Amounts:
+- **Instalments:** Total Overdue Amount: **0** (indicating no overdue)
+- **Non-Instalments:** Total Overdue Amount: **0** (indicating no overdue)
+
+### Summary:
+- **Total Combined Outstanding Balance:** **95,119**
+- **Number of Contracts with Overdue Amount:** **0** (none of the contracts show any overdue amount)
+
+Thus, the final answer is:
+- **Total Combined Outstanding Balance:** 95,119
+- **Contracts with Overdue Amount:** 0
